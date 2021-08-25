@@ -1,0 +1,216 @@
+@charset "UTF-8";
+/*donut chart colors*/
+/*services*/
+@font-face {
+  font-family: "SF-Pro-Display-Light";
+  src: url("../fonts/SF-Pro-Display-Light.ttf");
+}
+@font-face {
+  font-family: "SFProDisplay-Regular";
+  src: url("../fonts/SF-Pro-Display-Regular.ttf");
+}
+@font-face {
+  font-family: "SFProDisplay-Medium";
+  src: url("../fonts/SF-Pro-Display-Medium.ttf");
+}
+@font-face {
+  font-family: "SFProDisplay-Semibold";
+  src: url("../fonts/SF-Pro-Display-Semibold.ttf");
+}
+@font-face {
+  font-family: "SFProDisplay-Bold";
+  src: url("../fonts/SF-Pro-Display-Bold.ttf");
+}
+@font-face {
+  font-family: "SFProDisplay-Heavy";
+  src: url("../fonts/SF-Pro-Display-Heavy.ttf");
+}
+@font-face {
+  font-family: "SFProDisplay-RegularItalic";
+  src: url("../fonts/SFProDisplay-RegularItalic.ttf");
+}
+@font-face {
+  font-family: "SFProDisplay";
+  src: url("../fonts/SF-Pro-Display-Regular.ttf");
+}
+@font-face {
+  font-family: "SFProDisplay";
+  src: url("../fonts/SF-Pro-Display-Bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "SFProDisplay";
+  src: url("../fonts/SF-Pro-Display-Bold.ttf");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "SFProDisplay";
+  src: url("../fonts/SF-Pro-Display-Semibold.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "SFProDisplay";
+  src: url("../fonts/SFProDisplay-RegularItalic.ttf");
+  font-style: italic;
+}
+html {
+  font-family: SFProDisplay;
+  font-size: 14px;
+}
+
+#report-tutorial .text-bold {
+  font-weight: 500;
+}
+#report-tutorial .text-center {
+  text-align: center;
+}
+#report-tutorial .text-title {
+  font-size: 1.5rem;
+}
+#report-tutorial .text-chart-title {
+  font-size: 1.2rem;
+}
+#report-tutorial .text-chart-desc {
+  font-size: 0.8rem;
+}
+#report-tutorial .text--red {
+  color: #e50000;
+}
+#report-tutorial .text-white {
+  color: #fff;
+}
+#report-tutorial .box-padding {
+  padding: 0.8rem;
+}
+#report-tutorial .box-radius {
+  border-radius: 0.8rem;
+}
+#report-tutorial .bg-green {
+  background-color: #3F5959;
+}
+#report-tutorial .collapsible {
+  margin: 0;
+}
+#report-tutorial .collapsible--secondary .collapsible-header, #report-tutorial .collapsible--secondary .collapsible-body {
+  padding: 0.5rem 2rem;
+}
+#report-tutorial .collapsible--secondary .collapsible-header {
+  font-weight: 500;
+}
+#report-tutorial .collapsible-header {
+  font-weight: bold;
+  min-height: 4.07rem;
+  align-items: center;
+}
+#report-tutorial .collapsible--secondary .collapsible-header {
+  font-weight: 500;
+}
+
+#report-tutorial .collapsible-header--red {
+  color: #e50000;
+}
+#report-tutorial .collapsible-header--green {
+  color: #1B6418;
+}
+#report-tutorial .collapsible-header--blue {
+  color: #0b1892;
+}
+#report-tutorial .collapsible-header:after {
+  content: "+";
+  color: #000;
+  font-weight: bold;
+  margin: auto 0 auto auto;
+  padding-left: 5px;
+}
+#report-tutorial .active > .collapsible-header:after {
+  content: "−";
+}
+
+#report-tutorial .collapsible-body {
+  text-align: justify;
+  padding: 0;
+}
+#report-tutorial .imgaes-groups--row3 {
+  display: flex;
+  justify-content: space-between;
+}
+#report-tutorial .imgaes-groups--row3 div {
+  width: fit-content;
+  max-width: 30%;
+}
+#report-tutorial .imgaes-groups--row3 div img {
+  max-height: 6.8rem;
+}
+#report-tutorial .glossary {
+  display: flex;
+  flex-direction: column;
+}
+#report-tutorial .glossary > div {
+  display: flex;
+  flex: 1;
+  padding-left: 10px;
+}
+#report-tutorial .glossary > div div:first-child {
+  width: 7.14rem;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#report-tutorial .influence li {
+  list-style-type: square;
+  list-style-position: inside;
+}
+#report-tutorial .influence p {
+  margin: 0;
+}
+#report-tutorial .list-check-box li {
+  list-style: none;
+  position: relative;
+  padding: 0 0 0 30px;
+}
+#report-tutorial .list-check-box li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  height: 20px;
+  margin: auto 0;
+  border: 1px solid rgba(0, 0, 0, 0.71);
+}
+#report-tutorial .risk-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.5rem;
+}
+#report-tutorial .risk-group .risk-item {
+  width: calc( 100%/3 - 0.5rem);
+  margin-left: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+#report-tutorial .risk-group .risk-item--full-width {
+  width: 100%;
+}
+#report-tutorial .service-target {
+  display: flex;
+  flex-direction: column;
+}
+#report-tutorial .service-target > div {
+  display: flex;
+  flex: 1;
+}
+#report-tutorial .service-target > div p {
+  margin: 0.2rem 0;
+}
+#report-tutorial .service-target > div div:first-child {
+  width: 3.57rem;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 0.8rem;
+}
+
+/*# sourceMappingURL=report-tutorial.css.map */

@@ -1,0 +1,211 @@
+@import "color";
+@import "fonts";
+
+html {
+    font-family: SFProDisplay;
+    font-size: 14px;
+}
+
+@mixin if-direct-parent($parent-selector) {
+    $current-sequences: &;
+    $new-sequences: ();
+
+    @each $sequence in $current-sequences {
+        $current-selector: nth($sequence, -1);
+        $prepended-selector: join($parent-selector, $current-selector);
+        $new-sequence: set-nth($sequence, -1, $prepended-selector);
+        $new-sequences: append($new-sequences, $new-sequence, comma);
+    }
+
+    @at-root #{$new-sequences} {
+        @content;
+    }
+}
+
+#report-tutorial {
+    .text-bold {
+        font-weight: 500;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .text-title {
+        font-size: 1.5rem;
+    }
+
+    .text-chart-title {
+        font-size: 1.2rem;
+    }
+    .text-chart-desc {
+        font-size: 0.8rem;
+    }
+
+    .text--red {
+        color: $red_e5;
+    }
+
+    .text-white {
+        color: $white;
+    }
+
+    .box-padding {
+        padding: 0.8rem;
+    }
+    
+    .box-radius {
+        border-radius: 0.8rem;
+    }
+
+    .bg-green {
+        background-color: $green_3f;
+    }
+
+    .collapsible {
+        margin: 0;
+        &--primary {
+
+        }
+
+        &--secondary {
+            .collapsible-header, .collapsible-body {
+               padding: 0.5rem 2rem;
+            }
+
+            .collapsible-header {
+                font-weight: 500;
+            }
+        }
+    }
+    .collapsible-header {
+        font-weight: bold;
+        min-height: 4.07rem;
+        align-items: center;
+
+        @at-root #report-tutorial .collapsible--secondary .collapsible-header {
+            font-weight: 500;
+        }
+
+        &--red {
+            color: $red_e5;
+        }
+        &--green {
+            color: $green_1b;
+        }
+        &--blue {
+            color: $blue_0b;
+        }
+
+        &:after {
+            content: '\002B';
+            color: $black;
+            font-weight: bold;
+            margin: auto 0 auto auto;
+            padding-left: 5px;
+
+            @at-root #report-tutorial .active>.collapsible-header:after {
+                content: "\2212";
+            }
+        }
+    }
+
+    .collapsible-body {
+        text-align: justify;
+        padding: 0;
+        
+    }
+
+    .imgaes-groups {
+        &--row3 {
+            display: flex;
+            justify-content: space-between; 
+            div {
+                width: fit-content;
+                max-width: 30%;
+                img {
+                    max-height: 6.8rem;
+                }
+            }           
+        }
+    }
+
+    .glossary {
+        display: flex;
+        flex-direction: column;
+        &>div {
+            display: flex;
+            flex: 1;
+            padding-left: 10px;
+            div:first-child {
+                width: 7.14rem;
+                flex-shrink: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+    }
+    .influence {
+        li {
+            list-style-type: square;
+            list-style-position: inside;
+        }
+        p {
+           margin: 0;
+        }
+    }
+
+    .list-check-box {
+        li {
+            list-style: none;
+            position: relative;
+            padding: 0 0 0 30px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                width: 20px;
+                height: 20px;
+                margin: auto 0;
+                border: 1px solid $black_70;
+            }
+        }
+    }
+
+    .risk-group { 
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -0.5rem;
+        .risk-item {
+            width: calc( 100%/3 - 0.5rem);
+            margin-left: 0.5rem;
+            margin-bottom: 0.8rem;
+
+            &--full-width {
+                width: 100%;
+            }
+        }
+    }
+
+    .service-target {
+        display: flex;
+        flex-direction: column;
+        &>div {
+            display: flex;
+            flex: 1;
+            p {
+                margin: 0.2rem 0;
+            }
+            div:first-child {
+                width: 3.57rem;
+                flex-shrink: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-right: 0.8rem;
+            }
+        }
+    }
+}
