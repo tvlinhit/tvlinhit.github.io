@@ -89,6 +89,7 @@ html {
   background-color: #3F5959;
 }
 #report-tutorial .collapsible {
+  box-shadow: none;
   margin: 0;
 }
 #report-tutorial .collapsible--secondary .collapsible-header, #report-tutorial .collapsible--secondary .collapsible-body {
