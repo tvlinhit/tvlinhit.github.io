@@ -92,11 +92,17 @@ html {
   box-shadow: none;
   margin: 0;
 }
+#report-tutorial .collapsible--secondary {
+  border: none;
+}
 #report-tutorial .collapsible--secondary .collapsible-header, #report-tutorial .collapsible--secondary .collapsible-body {
   padding: 0.5rem 2rem;
 }
 #report-tutorial .collapsible--secondary .collapsible-header {
   font-weight: 500;
+}
+#report-tutorial .collapsible--secondary .collapsible-body {
+  border-bottom: 1px solid #ddd;
 }
 #report-tutorial .collapsible-header {
   font-weight: bold;
@@ -130,6 +136,7 @@ html {
 #report-tutorial .collapsible-body {
   text-align: justify;
   padding: 0;
+  border-bottom: none;
 }
 #report-tutorial .imgaes-groups--row3 {
   display: flex;

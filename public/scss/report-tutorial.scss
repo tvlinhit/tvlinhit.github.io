@@ -66,14 +66,18 @@ html {
         &--primary {
 
         }
-
         &--secondary {
+            border: none;
             .collapsible-header, .collapsible-body {
                padding: 0.5rem 2rem;
             }
 
             .collapsible-header {
                 font-weight: 500;
+            }
+
+            .collapsible-body {
+                border-bottom: 1px solid #ddd;
             }
         }
     }
@@ -112,7 +116,7 @@ html {
     .collapsible-body {
         text-align: justify;
         padding: 0;
-        
+        border-bottom: none;
     }
 
     .imgaes-groups {
