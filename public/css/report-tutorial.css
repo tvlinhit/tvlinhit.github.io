@@ -114,6 +114,14 @@ html {
   font-weight: 500;
   font-size: 1rem;
 }
+#report-tutorial .collapsible--secondary .collapsible-header:after {
+  content: "+";
+  font-size: 1.2rem;
+}
+#report-tutorial .collapsible--secondary .active > .collapsible-header:after {
+  content: "−";
+  font-size: 1.2rem;
+}
 
 #report-tutorial .collapsible-header--red {
   color: #e50000;
@@ -125,14 +133,26 @@ html {
   color: #0b1892;
 }
 #report-tutorial .collapsible-header:after {
-  content: "+";
   color: #000;
   font-weight: bold;
+  content: "expand_more";
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-size: 1.5rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
   margin: auto 0 auto auto;
   padding-left: 5px;
 }
 #report-tutorial .active > .collapsible-header:after {
-  content: "−";
+  content: "expand_less";
 }
 
 #report-tutorial .collapsible-body {
