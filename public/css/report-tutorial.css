@@ -91,6 +91,8 @@ html {
 #report-tutorial .collapsible {
   box-shadow: none;
   margin: 0;
+  border-left: none;
+  border-right: none;
 }
 #report-tutorial .collapsible--secondary {
   border: none;

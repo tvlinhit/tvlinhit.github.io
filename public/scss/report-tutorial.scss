@@ -63,6 +63,8 @@ html {
     .collapsible {
         box-shadow: none;
         margin: 0;
+        border-left: none;
+        border-right: none;
         &--primary {
 
         }

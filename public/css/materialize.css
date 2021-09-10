@@ -2520,7 +2520,7 @@ img.responsive-img, video.responsive-video {
 }
 
 .breadcrumb:before {
-  content: "";
+  content: "\e5cc";
   color: rgba(255, 255, 255, 0.7);
   vertical-align: top;
   display: inline-block;
